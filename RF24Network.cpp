@@ -960,6 +960,7 @@ bool RF24Network::write(uint16_t to_node, uint8_t directTo)  // Direct To: 0 = F
     if( !(networkFlags & FLAG_FAST_FRAG) ){
 	   #if !defined (DUAL_HEAD_RADIO)
          // Now, continue listening
+	 delay(1);
          radio.startListening();
        #endif	
 	}
